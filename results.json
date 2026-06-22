@@ -1,0 +1,1220 @@
+{
+  "generated_at": "2026-06-22T04:44:49.434840Z",
+  "tool": "PacketLens v1.0.0",
+  "file": "test.pcap",
+  "packet_count": 323,
+  "modules": {
+    "traffic": {
+      "summary": {
+        "total_packets": 323,
+        "total_bytes": 67557,
+        "duration_seconds": 31.711,
+        "throughput_bps": 17043.4,
+        "avg_packet_size": 209.2,
+        "min_packet_size": 42,
+        "max_packet_size": 1454
+      },
+      "protocols": {
+        "UDP": 60,
+        "TCP": 218,
+        "ICMP": 40,
+        "ARP": 5
+      },
+      "size_distribution": {
+        "tiny(<64)": 126,
+        "small(64-256)": 140,
+        "medium(256-1024)": 42,
+        "large(>1024)": 15
+      },
+      "top_sources": [
+        {
+          "ip": "192.168.1.12",
+          "bytes": 22411,
+          "packets": 20
+        },
+        {
+          "ip": "185.220.101.34",
+          "bytes": 8321,
+          "packets": 30
+        },
+        {
+          "ip": "8.8.8.8",
+          "bytes": 6162,
+          "packets": 44
+        },
+        {
+          "ip": "172.217.14.100",
+          "bytes": 4478,
+          "packets": 18
+        },
+        {
+          "ip": "1.1.1.1",
+          "bytes": 4363,
+          "packets": 17
+        },
+        {
+          "ip": "104.21.0.1",
+          "bytes": 4262,
+          "packets": 16
+        },
+        {
+          "ip": "192.168.1.15",
+          "bytes": 2165,
+          "packets": 18
+        },
+        {
+          "ip": "192.168.1.2",
+          "bytes": 1530,
+          "packets": 20
+        },
+        {
+          "ip": "10.0.0.99",
+          "bytes": 1350,
+          "packets": 25
+        },
+        {
+          "ip": "192.168.1.4",
+          "bytes": 1244,
+          "packets": 11
+        }
+      ],
+      "top_destinations": [
+        {
+          "ip": "172.217.14.100",
+          "bytes": 23967,
+          "packets": 33
+        },
+        {
+          "ip": "192.168.1.15",
+          "bytes": 4061,
+          "packets": 18
+        },
+        {
+          "ip": "185.220.101.34",
+          "bytes": 3980,
+          "packets": 30
+        },
+        {
+          "ip": "8.8.8.8",
+          "bytes": 3893,
+          "packets": 44
+        },
+        {
+          "ip": "192.168.1.2",
+          "bytes": 3129,
+          "packets": 37
+        },
+        {
+          "ip": "192.168.1.4",
+          "bytes": 2611,
+          "packets": 11
+        },
+        {
+          "ip": "192.168.1.19",
+          "bytes": 2536,
+          "packets": 10
+        },
+        {
+          "ip": "1.1.1.1",
+          "bytes": 2119,
+          "packets": 17
+        },
+        {
+          "ip": "192.168.1.7",
+          "bytes": 2053,
+          "packets": 9
+        },
+        {
+          "ip": "104.21.0.1",
+          "bytes": 2010,
+          "packets": 16
+        }
+      ],
+      "top_ports": [
+        {
+          "port": 80,
+          "service": "HTTP",
+          "count": 161
+        },
+        {
+          "port": 53,
+          "service": "DNS",
+          "count": 60
+        },
+        {
+          "port": 49193,
+          "service": "49193",
+          "count": 15
+        },
+        {
+          "port": 443,
+          "service": "HTTPS",
+          "count": 15
+        },
+        {
+          "port": 46668,
+          "service": "46668",
+          "count": 4
+        },
+        {
+          "port": 50272,
+          "service": "50272",
+          "count": 4
+        },
+        {
+          "port": 56017,
+          "service": "56017",
+          "count": 4
+        },
+        {
+          "port": 55798,
+          "service": "55798",
+          "count": 4
+        },
+        {
+          "port": 45057,
+          "service": "45057",
+          "count": 4
+        },
+        {
+          "port": 58133,
+          "service": "58133",
+          "count": 4
+        }
+      ],
+      "tcp_flags": {
+        "ACK+PSH": 97,
+        "SYN": 65,
+        "SYN+ACK": 40,
+        "ACK+RST": 12,
+        "NONE": 3,
+        "FIN+PSH+URG": 1
+      },
+      "ttl_distribution": [
+        {
+          "ttl": 64,
+          "count": 188,
+          "os_hint": "Linux/macOS (TTL\u226464)"
+        },
+        {
+          "ttl": 50,
+          "count": 80,
+          "os_hint": "Linux/macOS (TTL\u226464)"
+        },
+        {
+          "ttl": 55,
+          "count": 50,
+          "os_hint": "Linux/macOS (TTL\u226464)"
+        }
+      ]
+    },
+    "security": {
+      "risk_score": 90,
+      "risk_level": "CRITICAL",
+      "alerts": [
+        {
+          "severity": "HIGH",
+          "type": "Port Scan",
+          "detail": "1 potential scanner(s) detected"
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "Cleartext Protocol",
+          "detail": "1 dangerous protocol instance(s) observed"
+        },
+        {
+          "severity": "CRITICAL",
+          "type": "Cleartext Credentials",
+          "detail": "9 potential credential exposure(s)"
+        },
+        {
+          "severity": "HIGH",
+          "type": "TCP Flag Anomaly",
+          "detail": "4 anomalous TCP flag combination(s)"
+        }
+      ],
+      "findings": [
+        {
+          "type": "Port Scan",
+          "severity": "HIGH",
+          "src": "10.0.0.99",
+          "detail": "SYN probe to 25 distinct ports",
+          "ports_sample": [
+            1968,
+            5815,
+            7569,
+            14132,
+            15172,
+            16803,
+            20129,
+            20180,
+            21374,
+            24572,
+            25231,
+            25565,
+            27277,
+            35765,
+            36452,
+            45132,
+            45802,
+            46903,
+            50365,
+            50381
+          ]
+        },
+        {
+          "type": "Cleartext Protocol",
+          "severity": "MEDIUM",
+          "src": "192.168.1.9",
+          "dst": "203.0.113.10",
+          "detail": "Port 21: FTP (cleartext)"
+        },
+        {
+          "type": "Cleartext Credential",
+          "severity": "CRITICAL",
+          "src": "192.168.1.13",
+          "dst": "185.220.101.34",
+          "detail": "HTTP password param detected \u2014 value starts with: sec***"
+        },
+        {
+          "type": "Cleartext Credential",
+          "severity": "CRITICAL",
+          "src": "192.168.1.2",
+          "dst": "185.220.101.34",
+          "detail": "HTTP password param detected \u2014 value starts with: sec***"
+        },
+        {
+          "type": "Cleartext Credential",
+          "severity": "CRITICAL",
+          "src": "192.168.1.7",
+          "dst": "172.217.14.100",
+          "detail": "HTTP password param detected \u2014 value starts with: sec***"
+        },
+        {
+          "type": "Cleartext Credential",
+          "severity": "CRITICAL",
+          "src": "192.168.1.11",
+          "dst": "104.21.0.1",
+          "detail": "HTTP password param detected \u2014 value starts with: sec***"
+        },
+        {
+          "type": "Cleartext Credential",
+          "severity": "CRITICAL",
+          "src": "192.168.1.15",
+          "dst": "185.220.101.34",
+          "detail": "HTTP password param detected \u2014 value starts with: sec***"
+        },
+        {
+          "type": "Cleartext Credential",
+          "severity": "CRITICAL",
+          "src": "192.168.1.19",
+          "dst": "1.1.1.1",
+          "detail": "HTTP password param detected \u2014 value starts with: sec***"
+        },
+        {
+          "type": "Cleartext Credential",
+          "severity": "CRITICAL",
+          "src": "192.168.1.19",
+          "dst": "1.1.1.1",
+          "detail": "HTTP password param detected \u2014 value starts with: sec***"
+        },
+        {
+          "type": "Cleartext Credential",
+          "severity": "CRITICAL",
+          "src": "192.168.1.9",
+          "dst": "203.0.113.10",
+          "detail": "FTP USER detected \u2014 value starts with: adm***"
+        },
+        {
+          "type": "Cleartext Credential",
+          "severity": "CRITICAL",
+          "src": "192.168.1.9",
+          "dst": "203.0.113.10",
+          "detail": "FTP PASS detected \u2014 value starts with: hun***"
+        },
+        {
+          "type": "NULL Scan",
+          "severity": "HIGH",
+          "src": "172.16.0.1",
+          "dst": "192.168.1.2:75",
+          "detail": "TCP packet with no flags set (NULL scan)"
+        },
+        {
+          "type": "NULL Scan",
+          "severity": "HIGH",
+          "src": "172.16.0.1",
+          "dst": "192.168.1.2:746",
+          "detail": "TCP packet with no flags set (NULL scan)"
+        },
+        {
+          "type": "NULL Scan",
+          "severity": "HIGH",
+          "src": "172.16.0.1",
+          "dst": "192.168.1.2:782",
+          "detail": "TCP packet with no flags set (NULL scan)"
+        },
+        {
+          "type": "XMAS Scan",
+          "severity": "HIGH",
+          "src": "172.16.0.2",
+          "dst": "192.168.1.2:80",
+          "detail": "FIN+URG+PSH set (XMAS scan)"
+        }
+      ]
+    },
+    "dns": {
+      "total_queries": 30,
+      "unique_domains": 10,
+      "nxdomain_count": 0,
+      "tunneling_risk": false,
+      "query_type_dist": {
+        "A": 30
+      },
+      "top_queried_domains": [
+        {
+          "domain": "amazon.com",
+          "count": 7
+        },
+        {
+          "domain": "youtube.com",
+          "count": 3
+        },
+        {
+          "domain": "cloudflare.com",
+          "count": 3
+        },
+        {
+          "domain": "github.com",
+          "count": 3
+        },
+        {
+          "domain": "stackoverflow.com",
+          "count": 3
+        },
+        {
+          "domain": "aHR0cHM6Ly9leGFtcGxlLmNvbS9tYWxpY2lvdXM.evil.com",
+          "count": 3
+        },
+        {
+          "domain": "s3rv1ce-upd4te.tk",
+          "count": 2
+        },
+        {
+          "domain": "xn--p1b6ci4b4b3a.ru",
+          "count": 2
+        },
+        {
+          "domain": "twitter.com",
+          "count": 2
+        },
+        {
+          "domain": "reddit.com",
+          "count": 2
+        }
+      ],
+      "top_nxdomains": [],
+      "top_resolvers": [
+        {
+          "resolver": "8.8.8.8",
+          "queries": 30
+        }
+      ],
+      "txt_records": [],
+      "suspicious_domains": [
+        {
+          "domain": "s3rv1ce-upd4te.tk",
+          "reason": "Suspicious TLD (.tk)",
+          "src": "192.168.1.7"
+        },
+        {
+          "domain": "xn--p1b6ci4b4b3a.ru",
+          "reason": "DGA-like pattern (low vowel ratio)",
+          "src": "192.168.1.19"
+        },
+        {
+          "domain": "xn--p1b6ci4b4b3a.ru",
+          "reason": "Suspicious TLD (.ru)",
+          "src": "192.168.1.19"
+        },
+        {
+          "domain": "s3rv1ce-upd4te.tk",
+          "reason": "Suspicious TLD (.tk)",
+          "src": "192.168.1.2"
+        },
+        {
+          "domain": "xn--p1b6ci4b4b3a.ru",
+          "reason": "DGA-like pattern (low vowel ratio)",
+          "src": "192.168.1.14"
+        },
+        {
+          "domain": "xn--p1b6ci4b4b3a.ru",
+          "reason": "Suspicious TLD (.ru)",
+          "src": "192.168.1.14"
+        }
+      ],
+      "oversized_labels": []
+    },
+    "http": {
+      "total_requests": 35,
+      "total_responses": 40,
+      "method_distribution": {
+        "GET": 30,
+        "POST": 5
+      },
+      "status_code_distribution": {
+        "200": 23,
+        "301": 10,
+        "404": 6,
+        "500": 1
+      },
+      "status_classes": {
+        "2xx": 23,
+        "3xx": 10,
+        "4xx": 6,
+        "5xx": 1
+      },
+      "top_hosts": [
+        {
+          "host": "accounts.google.com",
+          "requests": 7
+        },
+        {
+          "host": "api.github.com",
+          "requests": 6
+        },
+        {
+          "host": "fonts.googleapis.com",
+          "requests": 6
+        },
+        {
+          "host": "cdn.jquery.com",
+          "requests": 5
+        },
+        {
+          "host": "s3.amazonaws.com",
+          "requests": 5
+        },
+        {
+          "host": "login.microsoftonline.com",
+          "requests": 4
+        },
+        {
+          "host": "example.com",
+          "requests": 2
+        }
+      ],
+      "top_user_agents": [
+        {
+          "ua": "sqlmap/1.7 (https://sqlmap.org)",
+          "count": 9
+        },
+        {
+          "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120",
+          "count": 8
+        },
+        {
+          "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 14_0) Safari/537.36",
+          "count": 8
+        },
+        {
+          "ua": "python-requests/2.31.0",
+          "count": 5
+        },
+        {
+          "ua": "curl/7.88.1",
+          "count": 5
+        }
+      ],
+      "top_content_types": {
+        "text/html": 40
+      },
+      "suspicious_requests": [
+        {
+          "reason": "Suspicious User-Agent: sqlmap/1.7 (https://sqlmap.org)",
+          "src": "192.168.1.4",
+          "host": "api.github.com",
+          "path": "/search?q=test"
+        },
+        {
+          "reason": "Suspicious User-Agent: sqlmap/1.7 (https://sqlmap.org)",
+          "src": "192.168.1.13",
+          "host": "s3.amazonaws.com",
+          "path": "/api/v1/users"
+        },
+        {
+          "reason": "Suspicious User-Agent: curl/7.88.1",
+          "src": "192.168.1.4",
+          "host": "accounts.google.com",
+          "path": "/admin"
+        },
+        {
+          "reason": "Suspicious User-Agent: sqlmap/1.7 (https://sqlmap.org)",
+          "src": "192.168.1.16",
+          "host": "fonts.googleapis.com",
+          "path": "/static/main.js"
+        },
+        {
+          "reason": "Suspicious User-Agent: curl/7.88.1",
+          "src": "192.168.1.18",
+          "host": "example.com",
+          "path": "/login"
+        },
+        {
+          "reason": "Suspicious User-Agent: curl/7.88.1",
+          "src": "10.0.0.10",
+          "host": "login.microsoftonline.com",
+          "path": "/"
+        },
+        {
+          "reason": "Suspicious User-Agent: curl/7.88.1",
+          "src": "192.168.1.14",
+          "host": "accounts.google.com",
+          "path": "/"
+        },
+        {
+          "reason": "Suspicious User-Agent: sqlmap/1.7 (https://sqlmap.org)",
+          "src": "192.168.1.15",
+          "host": "accounts.google.com",
+          "path": "/index.html"
+        },
+        {
+          "reason": "Suspicious User-Agent: sqlmap/1.7 (https://sqlmap.org)",
+          "src": "192.168.1.16",
+          "host": "accounts.google.com",
+          "path": "/api/v1/users"
+        },
+        {
+          "reason": "Suspicious User-Agent: curl/7.88.1",
+          "src": "192.168.1.2",
+          "host": "login.microsoftonline.com",
+          "path": "/api/v1/users"
+        },
+        {
+          "reason": "Suspicious User-Agent: sqlmap/1.7 (https://sqlmap.org)",
+          "src": "192.168.1.11",
+          "host": "fonts.googleapis.com",
+          "path": "/search?q=test"
+        },
+        {
+          "reason": "Suspicious User-Agent: sqlmap/1.7 (https://sqlmap.org)",
+          "src": "192.168.1.17",
+          "host": "api.github.com",
+          "path": "/admin"
+        },
+        {
+          "reason": "Suspicious User-Agent: sqlmap/1.7 (https://sqlmap.org)",
+          "src": "192.168.1.7",
+          "host": "example.com",
+          "path": "/index.html"
+        },
+        {
+          "reason": "Suspicious User-Agent: sqlmap/1.7 (https://sqlmap.org)",
+          "src": "192.168.1.19",
+          "host": "api.github.com",
+          "path": "/static/main.js"
+        }
+      ],
+      "sensitive_headers": [],
+      "requests_sample": [
+        {
+          "method": "GET",
+          "host": "login.microsoftonline.com",
+          "path": "/index.html",
+          "version": "HTTP/1.1",
+          "src": "192.168.1.12",
+          "dst": "104.21.0.1",
+          "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120"
+        },
+        {
+          "method": "GET",
+          "host": "cdn.jquery.com",
+          "path": "/admin",
+          "version": "HTTP/1.1",
+          "src": "192.168.1.8",
+          "dst": "104.21.0.1",
+          "user_agent": "python-requests/2.31.0"
+        },
+        {
+          "method": "GET",
+          "host": "cdn.jquery.com",
+          "path": "/",
+          "version": "HTTP/1.1",
+          "src": "192.168.1.19",
+          "dst": "104.21.0.1",
+          "user_agent": "python-requests/2.31.0"
+        },
+        {
+          "method": "GET",
+          "host": "api.github.com",
+          "path": "/search?q=test",
+          "version": "HTTP/1.1",
+          "src": "192.168.1.4",
+          "dst": "8.8.8.8",
+          "user_agent": "sqlmap/1.7 (https://sqlmap.org)"
+        },
+        {
+          "method": "GET",
+          "host": "cdn.jquery.com",
+          "path": "/search?q=test",
+          "version": "HTTP/1.1",
+          "src": "192.168.1.4",
+          "dst": "185.220.101.34",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 14_0) Safari/537.36"
+        },
+        {
+          "method": "GET",
+          "host": "s3.amazonaws.com",
+          "path": "/api/v1/users",
+          "version": "HTTP/1.1",
+          "src": "192.168.1.13",
+          "dst": "172.217.14.100",
+          "user_agent": "sqlmap/1.7 (https://sqlmap.org)"
+        },
+        {
+          "method": "GET",
+          "host": "fonts.googleapis.com",
+          "path": "/static/main.js",
+          "version": "HTTP/1.1",
+          "src": "192.168.1.10",
+          "dst": "1.1.1.1",
+          "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120"
+        },
+        {
+          "method": "GET",
+          "host": "accounts.google.com",
+          "path": "/admin",
+          "version": "HTTP/1.1",
+          "src": "192.168.1.4",
+          "dst": "185.220.101.34",
+          "user_agent": "curl/7.88.1"
+        },
+        {
+          "method": "GET",
+          "host": "s3.amazonaws.com",
+          "path": "/",
+          "version": "HTTP/1.1",
+          "src": "192.168.1.4",
+          "dst": "185.220.101.34",
+          "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120"
+        },
+        {
+          "method": "GET",
+          "host": "fonts.googleapis.com",
+          "path": "/static/main.js",
+          "version": "HTTP/1.1",
+          "src": "192.168.1.16",
+          "dst": "172.217.14.100",
+          "user_agent": "sqlmap/1.7 (https://sqlmap.org)"
+        }
+      ]
+    },
+    "sessions": {
+      "total_sessions": 101,
+      "tcp_sessions": 71,
+      "udp_sessions": 30,
+      "complete_handshakes": 52,
+      "sessions": [
+        {
+          "proto": "TCP",
+          "src": "172.217.14.100:443",
+          "dst": "192.168.1.12:49193",
+          "packets": 15,
+          "bytes": 21810,
+          "flags": "ACK,PSH",
+          "handshake": false,
+          "closed": false
+        },
+        {
+          "proto": "TCP",
+          "src": "185.220.101.34:80",
+          "dst": "192.168.1.2:40030",
+          "packets": 4,
+          "bytes": 915,
+          "flags": "ACK,PSH,SYN",
+          "handshake": true,
+          "closed": false
+        },
+        {
+          "proto": "TCP",
+          "src": "1.1.1.1:80",
+          "dst": "192.168.1.19:53055",
+          "packets": 4,
+          "bytes": 892,
+          "flags": "ACK,PSH,SYN",
+          "handshake": true,
+          "closed": false
+        },
+        {
+          "proto": "TCP",
+          "src": "172.217.14.100:80",
+          "dst": "192.168.1.11:56017",
+          "packets": 4,
+          "bytes": 887,
+          "flags": "ACK,PSH,SYN",
+          "handshake": true,
+          "closed": false
+        },
+        {
+          "proto": "TCP",
+          "src": "185.220.101.34:80",
+          "dst": "192.168.1.13:52963",
+          "packets": 4,
+          "bytes": 879,
+          "flags": "ACK,PSH,SYN",
+          "handshake": true,
+          "closed": false
+        },
+        {
+          "proto": "TCP",
+          "src": "1.1.1.1:80",
+          "dst": "192.168.1.10:51119",
+          "packets": 4,
+          "bytes": 872,
+          "flags": "ACK,PSH,SYN",
+          "handshake": true,
+          "closed": false
+        },
+        {
+          "proto": "TCP",
+          "src": "104.21.0.1:80",
+          "dst": "192.168.1.12:46668",
+          "packets": 4,
+          "bytes": 870,
+          "flags": "ACK,PSH,SYN",
+          "handshake": true,
+          "closed": false
+        },
+        {
+          "proto": "TCP",
+          "src": "104.21.0.1:80",
+          "dst": "192.168.1.11:56586",
+          "packets": 4,
+          "bytes": 870,
+          "flags": "ACK,PSH,SYN",
+          "handshake": true,
+          "closed": false
+        },
+        {
+          "proto": "TCP",
+          "src": "185.220.101.34:80",
+          "dst": "192.168.1.15:55508",
+          "packets": 4,
+          "bytes": 866,
+          "flags": "ACK,PSH,SYN",
+          "handshake": true,
+          "closed": false
+        },
+        {
+          "proto": "TCP",
+          "src": "185.220.101.34:80",
+          "dst": "192.168.1.15:40267",
+          "packets": 4,
+          "bytes": 866,
+          "flags": "ACK,PSH,SYN",
+          "handshake": true,
+          "closed": false
+        },
+        {
+          "proto": "TCP",
+          "src": "1.1.1.1:80",
+          "dst": "192.168.1.19:43787",
+          "packets": 4,
+          "bytes": 865,
+          "flags": "ACK,PSH,SYN",
+          "handshake": true,
+          "closed": false
+        },
+        {
+          "proto": "TCP",
+          "src": "104.21.0.1:80",
+          "dst": "192.168.1.7:47790",
+          "packets": 4,
+          "bytes": 860,
+          "flags": "ACK,PSH,SYN",
+          "handshake": true,
+          "closed": false
+        },
+        {
+          "proto": "TCP",
+          "src": "10.0.0.10:42435",
+          "dst": "8.8.8.8:80",
+          "packets": 4,
+          "bytes": 858,
+          "flags": "ACK,PSH,SYN",
+          "handshake": true,
+          "closed": false
+        },
+        {
+          "proto": "TCP",
+          "src": "192.168.1.15:44264",
+          "dst": "91.108.4.1:80",
+          "packets": 4,
+          "bytes": 856,
+          "flags": "ACK,PSH,SYN",
+          "handshake": true,
+          "closed": false
+        },
+        {
+          "proto": "TCP",
+          "src": "192.168.1.8:43782",
+          "dst": "8.8.8.8:80",
+          "packets": 4,
+          "bytes": 855,
+          "flags": "ACK,PSH,SYN",
+          "handshake": true,
+          "closed": false
+        },
+        {
+          "proto": "TCP",
+          "src": "10.0.0.10:45831",
+          "dst": "104.21.0.1:80",
+          "packets": 4,
+          "bytes": 854,
+          "flags": "ACK,PSH,SYN",
+          "handshake": true,
+          "closed": false
+        },
+        {
+          "proto": "TCP",
+          "src": "185.220.101.34:80",
+          "dst": "192.168.1.4:58133",
+          "packets": 4,
+          "bytes": 852,
+          "flags": "ACK,PSH,SYN",
+          "handshake": true,
+          "closed": false
+        },
+        {
+          "proto": "TCP",
+          "src": "1.1.1.1:80",
+          "dst": "192.168.1.8:50576",
+          "packets": 4,
+          "bytes": 852,
+          "flags": "ACK,PSH,SYN",
+          "handshake": true,
+          "closed": false
+        },
+        {
+          "proto": "TCP",
+          "src": "185.220.101.34:80",
+          "dst": "192.168.1.4:48323",
+          "packets": 4,
+          "bytes": 851,
+          "flags": "ACK,PSH,SYN",
+          "handshake": true,
+          "closed": false
+        },
+        {
+          "proto": "TCP",
+          "src": "185.220.101.34:80",
+          "dst": "192.168.1.17:54916",
+          "packets": 4,
+          "bytes": 850,
+          "flags": "ACK,PSH,SYN",
+          "handshake": true,
+          "closed": false
+        },
+        {
+          "proto": "TCP",
+          "src": "185.220.101.34:80",
+          "dst": "192.168.1.15:45185",
+          "packets": 4,
+          "bytes": 849,
+          "flags": "ACK,PSH,SYN",
+          "handshake": true,
+          "closed": false
+        },
+        {
+          "proto": "TCP",
+          "src": "185.220.101.34:80",
+          "dst": "192.168.1.15:52528",
+          "packets": 4,
+          "bytes": 849,
+          "flags": "ACK,PSH,SYN",
+          "handshake": true,
+          "closed": false
+        },
+        {
+          "proto": "TCP",
+          "src": "185.220.101.34:80",
+          "dst": "192.168.1.13:41723",
+          "packets": 4,
+          "bytes": 846,
+          "flags": "ACK,PSH,SYN",
+          "handshake": true,
+          "closed": false
+        },
+        {
+          "proto": "TCP",
+          "src": "172.217.14.100:80",
+          "dst": "192.168.1.16:57799",
+          "packets": 4,
+          "bytes": 845,
+          "flags": "ACK,PSH,SYN",
+          "handshake": true,
+          "closed": false
+        },
+        {
+          "proto": "TCP",
+          "src": "172.217.14.100:80",
+          "dst": "192.168.1.7:53022",
+          "packets": 4,
+          "bytes": 845,
+          "flags": "ACK,PSH,SYN",
+          "handshake": true,
+          "closed": false
+        },
+        {
+          "proto": "TCP",
+          "src": "185.220.101.34:80",
+          "dst": "192.168.1.19:44090",
+          "packets": 4,
+          "bytes": 837,
+          "flags": "ACK,PSH,SYN",
+          "handshake": true,
+          "closed": false
+        },
+        {
+          "proto": "TCP",
+          "src": "185.220.101.34:80",
+          "dst": "192.168.1.10:54634",
+          "packets": 4,
+          "bytes": 836,
+          "flags": "ACK,PSH,SYN",
+          "handshake": true,
+          "closed": false
+        },
+        {
+          "proto": "TCP",
+          "src": "172.217.14.100:80",
+          "dst": "192.168.1.16:52980",
+          "packets": 4,
+          "bytes": 829,
+          "flags": "ACK,PSH,SYN",
+          "handshake": true,
+          "closed": false
+        },
+        {
+          "proto": "TCP",
+          "src": "172.217.14.100:80",
+          "dst": "192.168.1.15:40215",
+          "packets": 4,
+          "bytes": 824,
+          "flags": "ACK,PSH,SYN",
+          "handshake": true,
+          "closed": false
+        },
+        {
+          "proto": "TCP",
+          "src": "172.217.14.100:80",
+          "dst": "192.168.1.13:55337",
+          "packets": 4,
+          "bytes": 823,
+          "flags": "ACK,PSH,SYN",
+          "handshake": true,
+          "closed": false
+        },
+        {
+          "proto": "TCP",
+          "src": "192.168.1.4:45057",
+          "dst": "8.8.8.8:80",
+          "packets": 4,
+          "bytes": 822,
+          "flags": "ACK,PSH,SYN",
+          "handshake": true,
+          "closed": false
+        },
+        {
+          "proto": "TCP",
+          "src": "104.21.0.1:80",
+          "dst": "192.168.1.12:45036",
+          "packets": 4,
+          "bytes": 818,
+          "flags": "ACK,PSH,SYN",
+          "handshake": true,
+          "closed": false
+        },
+        {
+          "proto": "TCP",
+          "src": "1.1.1.1:80",
+          "dst": "192.168.1.7:42973",
+          "packets": 4,
+          "bytes": 816,
+          "flags": "ACK,PSH,SYN",
+          "handshake": true,
+          "closed": false
+        },
+        {
+          "proto": "TCP",
+          "src": "185.220.101.34:80",
+          "dst": "192.168.1.17:40193",
+          "packets": 4,
+          "bytes": 814,
+          "flags": "ACK,PSH,SYN",
+          "handshake": true,
+          "closed": false
+        },
+        {
+          "proto": "TCP",
+          "src": "192.168.1.2:58547",
+          "dst": "8.8.8.8:80",
+          "packets": 4,
+          "bytes": 812,
+          "flags": "ACK,PSH,SYN",
+          "handshake": true,
+          "closed": false
+        },
+        {
+          "proto": "TCP",
+          "src": "104.21.0.1:80",
+          "dst": "192.168.1.8:50272",
+          "packets": 4,
+          "bytes": 808,
+          "flags": "ACK,PSH,SYN",
+          "handshake": true,
+          "closed": false
+        },
+        {
+          "proto": "TCP",
+          "src": "104.21.0.1:80",
+          "dst": "192.168.1.19:55798",
+          "packets": 4,
+          "bytes": 800,
+          "flags": "ACK,PSH,SYN",
+          "handshake": true,
+          "closed": false
+        },
+        {
+          "proto": "TCP",
+          "src": "1.1.1.1:80",
+          "dst": "10.0.0.10:47261",
+          "packets": 4,
+          "bytes": 800,
+          "flags": "ACK,PSH,SYN",
+          "handshake": true,
+          "closed": false
+        },
+        {
+          "proto": "TCP",
+          "src": "185.220.101.34:80",
+          "dst": "192.168.1.4:46897",
+          "packets": 4,
+          "bytes": 799,
+          "flags": "ACK,PSH,SYN",
+          "handshake": true,
+          "closed": false
+        },
+        {
+          "proto": "TCP",
+          "src": "172.217.14.100:80",
+          "dst": "192.168.1.18:59169",
+          "packets": 4,
+          "bytes": 798,
+          "flags": "ACK,PSH,SYN",
+          "handshake": true,
+          "closed": false
+        },
+        {
+          "proto": "TCP",
+          "src": "1.1.1.1:80",
+          "dst": "192.168.1.14:47445",
+          "packets": 4,
+          "bytes": 797,
+          "flags": "ACK,PSH,SYN",
+          "handshake": true,
+          "closed": false
+        },
+        {
+          "proto": "UDP",
+          "src": "192.168.1.17:48743",
+          "dst": "8.8.8.8:53",
+          "packets": 2,
+          "bytes": 280,
+          "flags": "-",
+          "handshake": false,
+          "closed": false
+        },
+        {
+          "proto": "UDP",
+          "src": "192.168.1.5:54076",
+          "dst": "8.8.8.8:53",
+          "packets": 2,
+          "bytes": 280,
+          "flags": "-",
+          "handshake": false,
+          "closed": false
+        },
+        {
+          "proto": "UDP",
+          "src": "192.168.1.14:45460",
+          "dst": "8.8.8.8:53",
+          "packets": 2,
+          "bytes": 280,
+          "flags": "-",
+          "handshake": false,
+          "closed": false
+        },
+        {
+          "proto": "UDP",
+          "src": "192.168.1.19:45342",
+          "dst": "8.8.8.8:53",
+          "packets": 2,
+          "bytes": 193,
+          "flags": "-",
+          "handshake": false,
+          "closed": false
+        },
+        {
+          "proto": "UDP",
+          "src": "192.168.1.14:51924",
+          "dst": "8.8.8.8:53",
+          "packets": 2,
+          "bytes": 193,
+          "flags": "-",
+          "handshake": false,
+          "closed": false
+        },
+        {
+          "proto": "UDP",
+          "src": "192.168.1.7:55351",
+          "dst": "8.8.8.8:53",
+          "packets": 2,
+          "bytes": 187,
+          "flags": "-",
+          "handshake": false,
+          "closed": false
+        },
+        {
+          "proto": "UDP",
+          "src": "192.168.1.7:55882",
+          "dst": "8.8.8.8:53",
+          "packets": 2,
+          "bytes": 187,
+          "flags": "-",
+          "handshake": false,
+          "closed": false
+        },
+        {
+          "proto": "UDP",
+          "src": "10.0.0.10:45379",
+          "dst": "8.8.8.8:53",
+          "packets": 2,
+          "bytes": 187,
+          "flags": "-",
+          "handshake": false,
+          "closed": false
+        },
+        {
+          "proto": "UDP",
+          "src": "192.168.1.2:40404",
+          "dst": "8.8.8.8:53",
+          "packets": 2,
+          "bytes": 187,
+          "flags": "-",
+          "handshake": false,
+          "closed": false
+        }
+      ]
+    }
+  }
+}
