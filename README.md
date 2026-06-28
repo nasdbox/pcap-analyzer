@@ -4,19 +4,6 @@ A full-featured network traffic analyzer built with **Scapy**. Supports offline 
 
 ---
 
-## Features
-
-| Module | What it does |
-|---|---|
-| **Traffic Analysis** | Protocol breakdown, top talkers, throughput, packet sizes, TTL-based OS fingerprinting |
-| **Security Analysis** | Port scan detection, NULL/XMAS/FIN scans, cleartext credentials, large data exfil, ICMP anomalies |
-| **DNS Analysis** | Query breakdown, NXDOMAIN tracking, DGA domain detection, tunneling heuristics, TXT records |
-| **HTTP Analysis** | Request/response extraction, method & status code stats, suspicious UAs, SQLi/XSS in URLs |
-| **Session Reconstruction** | TCP/UDP flow tracking, handshake detection, bytes per flow |
-| **Reports** | Console (colorized), JSON export, self-contained interactive HTML with Chart.js |
-
----
-
 ## Quick Start
 
 ```bash
