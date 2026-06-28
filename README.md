@@ -52,31 +52,6 @@ python main.py info
 
 ---
 
-## Project Structure
-
-```
-pcap_analyzer/
-├── main.py                    # CLI entry point
-├── requirements.txt
-├── core/
-│   ├── capture.py             # PCAP loading & live capture
-│   └── session.py             # TCP/UDP session reconstruction
-├── analyzers/
-│   ├── traffic.py             # Protocol & traffic stats
-│   ├── security.py            # Security threat detection
-│   ├── dns.py                 # DNS analysis & anomaly detection
-│   └── http.py                # HTTP request/response analysis
-├── reporters/
-│   ├── console.py             # Colorized terminal output
-│   ├── json_reporter.py       # JSON export
-│   └── html_reporter.py       # Interactive HTML report
-└── utils/
-    ├── logger.py
-    └── pcap_generator.py      # Synthetic PCAP generator for testing
-```
-
----
-
 ## Security Detection Capabilities
 
 - **Port Scans**: Detects SYN sweeps across ≥15 distinct ports from one source
