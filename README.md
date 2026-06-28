@@ -1,4 +1,4 @@
-# PacketLens — Packet Capture Analysis Tool
+# PCAP Analyzer
 
 A full-featured network traffic analyzer built with **Scapy**. Supports offline PCAP analysis, live capture, security detection, DNS/HTTP inspection, session reconstruction, and HTML/JSON reporting.
 
